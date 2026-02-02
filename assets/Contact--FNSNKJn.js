@@ -1,1 +1,0 @@
-import{j as t}from"./index-CelutgAZ.js";import{C as e}from"./Container-OV-Cen0M.js";const n=()=>t.jsx(e,{children:t.jsx("h1",{className:"text-4xl font-bold mb-4 text-center",children:"Contact Us"})});export{n as default};
