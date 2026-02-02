@@ -1,1 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import "tailwindcss";
+
+/* 
+  Tailwind CSS is being used for utility-first styling.
+  Custom font variables are defined below for use in the theme.
+*/
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+}
