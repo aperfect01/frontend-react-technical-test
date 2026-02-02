@@ -1,6 +1,6 @@
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
 
 // Lazy load pages
 const LandingPage = lazy(() => import("./pages/Landing"));
@@ -20,7 +20,7 @@ const Loader = () => (
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -33,7 +33,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
