@@ -1,5 +1,7 @@
+import type { IconType } from "react-icons/lib";
+
 interface StatItemProps {
-  imageSrc?: string;
+  icon?: IconType;
   label: string;
   value: string;
   className?: string;
@@ -7,7 +9,7 @@ interface StatItemProps {
 }
 
 export const StatItem = ({
-  imageSrc,
+  icon: Icon,
   label,
   value,
   className,
@@ -18,7 +20,7 @@ export const StatItem = ({
       <div
         className={`bg-white shadow-lg rounded-md p-4 mb-2 ${imageContainerClassName}`}
       >
-        {imageSrc && <img src={imageSrc} alt={label} className="w-8 h-8" />}
+        {Icon && <Icon className="w-8 h-8 text-primary" />}
       </div>
       <div className="flex flex-col items-baseline">
         <span className="text-xl font-semibold">{value}</span>

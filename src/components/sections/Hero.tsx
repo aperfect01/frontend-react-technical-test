@@ -1,6 +1,8 @@
+import { LuShieldCheck } from "react-icons/lu";
+import { MdOutlineTune } from "react-icons/md";
+import buildingImage from "../../assets/building.jpg";
 import { Card } from "../common/Card";
 import { StatItem } from "../common/StatItem";
-import buildingImage from "../../assets/building.jpg";
 
 export const HeroSection = () => {
   return (
@@ -30,12 +32,12 @@ export const HeroSection = () => {
             {/* Stat Items */}
             <div className="grid grid-cols-2 gap-4 w-full mt-4">
               <StatItem
-                imageSrc="/images/icon1.png"
+                icon={LuShieldCheck}
                 label="Your protection"
                 value="2000+"
               />
               <StatItem
-                imageSrc="/images/icon2.png"
+                icon={MdOutlineTune}
                 label="Provide tailored"
                 value="7001+"
               />
