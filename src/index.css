@@ -9,4 +9,8 @@
   --font-poppins: "Poppins", sans-serif;
   --color-primary: #fd6838;
   --color-secondary: #fff5f4;
+
+  --color-muted: #6b7280;
+  --color-muted-light: #c3c3c3;
+  --color-muted-dark: #8b878a;
 }
