@@ -1,1 +1,0 @@
-import{j as e}from"./index-BAvMnzz3.js";import{C as t}from"./Container-BQ_ftQO5.js";const s=()=>e.jsxs(t,{children:[e.jsx("h1",{className:"text-4xl font-bold mb-4 text-center",children:"404 - Page Not Found"}),e.jsx("p",{className:"text-lg text-center",children:"The page you are looking for does not exist."})]});export{s as default};
