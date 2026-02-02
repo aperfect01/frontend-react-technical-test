@@ -12,10 +12,10 @@ export const Header = () => {
     <header className="bg-transparent py-4 md:py-6 md:px-0">
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center gap-3">
+        <NavLink to="/" className="flex items-center gap-3">
           <LiaAtomSolid className="w-8 h-8 md:w-10 md:h-10 text-primary" />
           <h1 className="text-2xl md:text-3xl font-bold">Website</h1>
-        </div>
+        </NavLink>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-10">
