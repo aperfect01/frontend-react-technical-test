@@ -1,0 +1,1 @@
+import{j as e}from"./index-BAvMnzz3.js";import{C as t}from"./Container-BQ_ftQO5.js";const o=()=>e.jsx(t,{children:e.jsx("h1",{className:"text-4xl font-bold mb-4 text-center",children:"Services"})});export{o as default};
