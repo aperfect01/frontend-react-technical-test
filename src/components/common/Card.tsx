@@ -6,7 +6,7 @@ interface CardProps {
 export const Card = ({ children, containerClassName = "" }: CardProps) => {
   return (
     <div
-      className={`p-6 bg-white rounded-lg shadow-md border border-gray-200 font-poppins ${containerClassName}`}
+      className={`p-6 bg-white rounded-3xl border-none shadow-2xl/50  ${containerClassName}`}
     >
       {children}
     </div>
