@@ -4,6 +4,7 @@ import { LandingPage } from "./pages/Landing";
 import { AboutPage } from "./pages/About";
 import { ContactPage } from "./pages/Contact";
 import { NotFoundPage } from "./pages/NotFound";
+import { ServicesPage } from "./pages/Services";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
