@@ -1,10 +1,20 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { LandingPage } from "./pages/Landing";
+import { AboutPage } from "./pages/About";
+import { ContactPage } from "./pages/Contact";
+import { NotFoundPage } from "./pages/NotFound";
 
 function App() {
   return (
-    <>
-      <h1 className="text-5xl font-bold">Hello, Vite + React + TailwindCSS!</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
