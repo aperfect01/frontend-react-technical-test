@@ -1,74 +1,76 @@
+import { FiArrowUpRight } from "react-icons/fi";
+
 export const featuresData = [
   {
     title: "Thrive in a digital first world",
     description:
       "From marketing strategies and brand-development to business consulting and digital.",
-    icon: "1",
+    icon: FiArrowUpRight,
   },
   {
     title: "Let's turn your vision into reality",
     description:
       "From marketing strategies and brand-development to business consulting and digital.",
-    icon: "2",
+    icon: FiArrowUpRight,
   },
   {
     title: "Where innovation meets strategy.",
     description:
       "From marketing strategies and brand-development to business consulting and digital.",
-    icon: "3",
+    icon: FiArrowUpRight,
   },
   {
     title: "Lorem ipsum dolor sit amet",
     description:
       "From marketing strategies and brand-development to business consulting and digital.",
-    icon: "4",
+    icon: FiArrowUpRight,
   },
   {
     title: "Lorem ipsum dolor sit amet",
     description:
       "From marketing strategies and brand-development to business consulting and digital.",
-    icon: "5",
+    icon: FiArrowUpRight,
   },
   {
     title: "Lorem ipsum dolor sit amet",
     description:
       "From marketing strategies and brand-development to business consulting and digital.",
-    icon: "6",
+    icon: FiArrowUpRight,
   },
   {
     title: "Thrive in a digital first world",
     description:
       "From marketing strategies and brand-development to business consulting and digital.",
-    icon: "🚀",
+    icon: FiArrowUpRight,
   },
   {
     title: "Let's turn your vision into reality",
     description:
       "From marketing strategies and brand-development to business consulting and digital.",
-    icon: "💡",
+    icon: FiArrowUpRight,
   },
   {
     title: "Where innovation meets strategy.",
     description:
       "From marketing strategies and brand-development to business consulting and digital.",
-    icon: "🌐",
+    icon: FiArrowUpRight,
   },
   {
     title: "Lorem ipsum dolor sit amet",
     description:
       "From marketing strategies and brand-development to business consulting and digital.",
-    icon: "📈",
+    icon: FiArrowUpRight,
   },
   {
     title: "Lorem ipsum dolor sit amet",
     description:
       "From marketing strategies and brand-development to business consulting and digital.",
-    icon: "⚙️",
+    icon: FiArrowUpRight,
   },
   {
     title: "Lorem ipsum dolor sit amet",
     description:
       "From marketing strategies and brand-development to business consulting and digital.",
-    icon: "🔒",
+    icon: FiArrowUpRight,
   },
 ];

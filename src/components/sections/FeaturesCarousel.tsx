@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { featuresData } from "../../data/features";
 import { FeatureCard } from "./FeatureCard";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 export const FeaturesCarousel = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -53,7 +54,7 @@ export const FeaturesCarousel = () => {
             key={index}
             title={feature.title}
             description={feature.description}
-            iconSrc={feature.icon}
+            icon={feature.icon}
             className="min-w-[30%] p-10 px-10"
           />
         ))}
@@ -62,13 +63,9 @@ export const FeaturesCarousel = () => {
       {canScrollLeft && (
         <div
           onClick={() => scroll("left")}
-          className="absolute top-0 -left-50 h-full w-[50%] flex items-center justify-start cursor-pointer p-4 -translate-x-1/2 bg-[#fffafa] hover:bg-white/70 transition-colors"
+          className="absolute top-0 -left-50 h-full w-[50%] flex items-center justify-end cursor-pointer p-4 -translate-x-1/2 bg-[#fffafa] hover:bg-white/70 transition-colors"
         >
-          <img
-            src="/images/arrow-left.png"
-            alt="Left Arrow"
-            className="w-6 h-6"
-          />
+          <FaArrowLeft className="w-15 h-15 text-primary" />
         </div>
       )}
 
@@ -76,13 +73,9 @@ export const FeaturesCarousel = () => {
       {canScrollRight && (
         <div
           onClick={() => scroll("right")}
-          className="absolute top-0 -right-50 h-full w-[50%] flex items-center justify-end cursor-pointer p-4 translate-x-1/2 bg-[#fffafa] hover:bg-white/70 transition-colors"
+          className="absolute top-0 -right-50 h-full w-[50%] flex items-center justify-start cursor-pointer p-4 translate-x-1/2 bg-[#fffafa] hover:bg-white/70 transition-colors"
         >
-          <img
-            src="/images/arrow-right.png"
-            alt="Right Arrow"
-            className="w-6 h-6"
-          />
+          <FaArrowRight className="w-15 h-15 text-primary" />
         </div>
       )}
     </div>
