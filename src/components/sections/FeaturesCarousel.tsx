@@ -22,7 +22,6 @@ export const FeaturesCarousel = () => {
     if (!carouselRef.current) return;
 
     const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-
     const paddingThreshold = 15; // px tolerance
 
     setCanScrollLeft(scrollLeft > paddingThreshold);
@@ -46,18 +45,20 @@ export const FeaturesCarousel = () => {
   }, []);
 
   return (
-    <div className="relative mt-30">
-      {/* Positioning context WITHOUT vertical padding */}
+    <div className="relative mt-10 md:mt-16">
       <div className="relative">
-        {/* Scroll container WITH padding */}
-        <div ref={carouselRef} className="flex gap-5 px-5 py-10 carousel">
+        {/* Scroll container */}
+        <div
+          ref={carouselRef}
+          className="flex gap-5 px-4 md:px-5 py-6 md:py-10 carousel"
+        >
           {featuresData.map((feature, index) => (
             <FeatureCard
               key={index}
               title={feature.title}
               description={feature.description}
               icon={feature.icon}
-              className="min-w-[30%] p-10 shadow-xl/50"
+              className="max-w-[90%] md:max-w-[45%] lg:min-w-[30%] p-6 md:p-10 shadow-xl/50 flex-shrink-0"
             />
           ))}
         </div>
@@ -66,9 +67,9 @@ export const FeaturesCarousel = () => {
         {canScrollLeft && (
           <button
             onClick={() => scroll("left")}
-            className="absolute top-10 bottom-10 left-0 w-[50%] -translate-x-4/5 bg-[#fffafa] hover:bg-white/70 flex items-center justify-end pr-4 cursor-pointer"
+            className="h-full absolute top-0 bottom-10 left-0 w-[50%] -translate-x-4/5 bg-[#fffafa] hover:bg-white/70 flex items-center justify-end pr-4 cursor-pointer"
           >
-            <FaArrowLeft className="w-15 h-15 text-primary" />
+            <FaArrowLeft className="size-8 lg:size-15 text-primary" />
           </button>
         )}
 
@@ -76,9 +77,9 @@ export const FeaturesCarousel = () => {
         {canScrollRight && (
           <button
             onClick={() => scroll("right")}
-            className="absolute top-10 bottom-10 right-0 w-[50%] translate-x-4/5 bg-[#fffafa] hover:bg-white/70 flex items-center justify-start pl-4 cursor-pointer"
+            className="h-full absolute top-0 bottom-10 right-0 w-[50%] translate-x-4/5 bg-[#fffafa] hover:bg-white/70 flex items-center justify-start pl-4 cursor-pointer"
           >
-            <FaArrowRight className="w-15 h-15 text-primary" />
+            <FaArrowRight className="size-8 lg:size-15 text-primary" />
           </button>
         )}
       </div>

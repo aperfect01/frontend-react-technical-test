@@ -15,13 +15,15 @@ export const FeatureCard = ({
   className = "",
 }: FeatureCardProps) => {
   return (
-    <Card containerClassName={className}>
-      <div className="flex flex-col gap-5">
-        <div className="w-16 h-16 bg-secondary p-2 flex items-center justify-center">
-          <Icon className="size-10 text-primary" />
+    <Card containerClassName={`${className}`}>
+      <div className="flex flex-col gap-4 md:gap-5">
+        <div className="w-12 h-12 md:w-16 md:h-16 bg-secondary p-2 flex items-center justify-center rounded-md">
+          <Icon className="w-5 h-5 md:w-10 md:h-10 text-primary" />
         </div>
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-sm text-gray-600">{description}</p>
+        <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">
+          {title}
+        </h3>
+        <p className="text-sm md:text-base text-gray-600">{description}</p>
       </div>
     </Card>
   );
