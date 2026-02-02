@@ -47,37 +47,41 @@ export const FeaturesCarousel = () => {
 
   return (
     <div className="relative mt-30">
-      {/* Carousel Wrapper */}
-      <div ref={carouselRef} className="flex gap-5 py-10 p-5  carousel">
-        {featuresData.map((feature, index) => (
-          <FeatureCard
-            key={index}
-            title={feature.title}
-            description={feature.description}
-            icon={feature.icon}
-            className="min-w-[30%] p-10 px-10"
-          />
-        ))}
-      </div>
-      {/* Carousel Left Arrow */}
-      {canScrollLeft && (
-        <div
-          onClick={() => scroll("left")}
-          className="absolute top-0 -left-50 h-full w-[50%] flex items-center justify-end cursor-pointer p-4 -translate-x-1/2 bg-[#fffafa] hover:bg-white/70 transition-colors"
-        >
-          <FaArrowLeft className="w-15 h-15 text-primary" />
+      {/* Positioning context WITHOUT vertical padding */}
+      <div className="relative">
+        {/* Scroll container WITH padding */}
+        <div ref={carouselRef} className="flex gap-5 px-5 py-10 carousel">
+          {featuresData.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              title={feature.title}
+              description={feature.description}
+              icon={feature.icon}
+              className="min-w-[30%] p-10 shadow-xl/50"
+            />
+          ))}
         </div>
-      )}
 
-      {/* Carousel Right Arrow */}
-      {canScrollRight && (
-        <div
-          onClick={() => scroll("right")}
-          className="absolute top-0 -right-50 h-full w-[50%] flex items-center justify-start cursor-pointer p-4 translate-x-1/2 bg-[#fffafa] hover:bg-white/70 transition-colors"
-        >
-          <FaArrowRight className="w-15 h-15 text-primary" />
-        </div>
-      )}
+        {/* Left Arrow */}
+        {canScrollLeft && (
+          <button
+            onClick={() => scroll("left")}
+            className="absolute top-10 bottom-10 left-0 w-[50%] -translate-x-4/5 bg-[#fffafa] hover:bg-white/70 flex items-center justify-end pr-4 cursor-pointer"
+          >
+            <FaArrowLeft className="w-15 h-15 text-primary" />
+          </button>
+        )}
+
+        {/* Right Arrow */}
+        {canScrollRight && (
+          <button
+            onClick={() => scroll("right")}
+            className="absolute top-10 bottom-10 right-0 w-[50%] translate-x-4/5 bg-[#fffafa] hover:bg-white/70 flex items-center justify-start pl-4 cursor-pointer"
+          >
+            <FaArrowRight className="w-15 h-15 text-primary" />
+          </button>
+        )}
+      </div>
     </div>
   );
 };
