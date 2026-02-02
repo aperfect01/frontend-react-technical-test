@@ -1,3 +1,4 @@
+import { LiaAtomSolid } from "react-icons/lia";
 import { NavLink } from "react-router-dom";
 import { navigationLinks } from "../../data/navigation";
 import { Button } from "../common/Button";
@@ -6,7 +7,10 @@ export const Header = () => {
   return (
     <header className="bg-transparent py-10">
       <div className="flex justify-between items-center px-4">
-        <h1 className="text-3xl font-bold">My Website</h1>
+        <div className="flex items-center gap-3">
+          <LiaAtomSolid className="w-10 h-10 text-primary" />
+          <h1 className="text-3xl font-bold">Website</h1>
+        </div>
         <div className="space-x-20">
           {navigationLinks.map((link) => (
             <NavLink
