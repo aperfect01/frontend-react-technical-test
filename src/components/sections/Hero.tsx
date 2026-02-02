@@ -1,3 +1,4 @@
+import { HiOutlinePresentationChartBar } from "react-icons/hi";
 import { LuShieldCheck } from "react-icons/lu";
 import { MdOutlineTune } from "react-icons/md";
 import buildingImage from "../../assets/building.jpg";
@@ -18,11 +19,10 @@ export const HeroSection = () => {
           <div className="flex flex-col gap-10 mr-56">
             {/* Image with text */}
             <div className="flex flex-row gap-6">
-              <img
-                src="/images/avatar.png"
-                alt="Avatar"
-                className="w-[120px] h-[120px] rounded-md bg-muted-light flex-shrink-0  "
-              />
+              <div className="size-30 rounded-md bg-muted-light flex-shrink-0 flex items-center justify-center">
+                <HiOutlinePresentationChartBar className="w-15 h-15 text-primary" />
+              </div>
+
               <p className="text-sm text-muted-dark font-semibold mt-4">
                 Where we elevate your business with innovative strategies and
                 expert solutions. As a full-service business agency
