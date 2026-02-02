@@ -1,5 +1,5 @@
-import { navigationLinks } from "../data/navigation";
-import Button from "./Button";
+import { navigationLinks } from "../../data/navigation";
+import Button from "../common/Button";
 
 export const Header = () => {
   return (
