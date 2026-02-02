@@ -6,9 +6,11 @@ interface ContainerProps {
 
 export const Container = ({ children }: ContainerProps) => {
   return (
-    <div className="bg-secondary w-full p-4 font-poppins">
-      <Header />
-      {children}
+    <div className="bg-secondary w-full font-poppins">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Header />
+        {children}
+      </div>
     </div>
   );
 };
