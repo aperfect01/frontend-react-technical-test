@@ -14,3 +14,14 @@
   --color-muted-light: #c3c3c3;
   --color-muted-dark: #8b878a;
 }
+
+.carousel {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
